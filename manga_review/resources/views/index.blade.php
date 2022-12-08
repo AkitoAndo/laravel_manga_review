@@ -15,7 +15,7 @@
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="/index">Navbar</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -30,7 +30,9 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" aria-current="page" href="/index"
+                >Home</a
+              >
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">ランキング</a>
@@ -53,7 +55,7 @@
         @endforeach
       </ul>
       @endif
-      <a href="#">漫画の追加</a>
+      <a href="/create">漫画の追加</a>
       <a href="#">漫画の削除</a>
     </div>
 
