@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\MangaController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,6 +18,5 @@ Route::get('/', function () {
     return redirect('index');
 });
 
-Route::get('/index',function() {
-    return view('welcome');
-});
+
+Route::get('/index', [MangaController::class, 'index']);

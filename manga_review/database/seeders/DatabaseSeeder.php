@@ -18,8 +18,8 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
             MangaSeeder::class,
-            ReviewSeeder::class,
-            UserSeeder::class,
+            // ReviewSeeder::class,
+            // UserSeeder::class,ßß
         ]);
     }
 }
