@@ -18,5 +18,6 @@ Route::get('/', function () {
     return redirect('index');
 });
 
-
 Route::get('/index', [MangaController::class, 'index']);
+Route::get('/create', [MangaController::class, 'createForm']);
+Route::post('/create', [MangaController::class, 'create']);
