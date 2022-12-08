@@ -15,7 +15,7 @@
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/index">Navbar</a>
+        <a class="navbar-brand" href="#">Navbar</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -46,17 +46,53 @@
     </nav>
 
     <div class="container">
-      @if ($mangas->isNotEmpty())
-      <ul>
-        @foreach ($mangas as $item)
-        <li>
-          {{ $item->name }}
-        </li>
-        @endforeach
-      </ul>
-      @endif
-      <a href="/create">漫画の追加</a>
-      <a href="#">漫画の削除</a>
+      <h2>CreateManga</h2>
+      <form action="/create" method="post">
+        @csrf
+        <div>
+          <label for="name"> Manga name </label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="name"
+            required=""
+          />
+        </div>
+        <div>
+          <label for="author"> Author name </label>
+          <input
+            type="text"
+            name="author"
+            id="author"
+            placeholder="author"
+            required=""
+          />
+        </div>
+        <div>
+          <label for="publisher"> Publisher name </label>
+          <input
+            type="text"
+            name="publisher"
+            id="publisher"
+            placeholder="publisher"
+            required=""
+          />
+        </div>
+        <div>
+          <label for="description"> description </label>
+          <input
+            type="text"
+            name="description"
+            id="description"
+            placeholder="description"
+            required=""
+          />
+        </div>
+        <div class="button-form">
+          <button class="btn btn-outline-dark" type="submit">Submit</button>
+        </div>
+      </form>
     </div>
 
     <script
